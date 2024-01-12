@@ -1,0 +1,5 @@
+#!/bin/bash
+# it's first script
+echo 'abc'
+echo 'Hello World!'
+#echo 'Test 00'

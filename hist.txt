@@ -1,0 +1,883 @@
+    1  echo $PATH
+    2  which mount
+    3  find /usr -name umount
+    4  dir
+    5  ls
+    6  ls /usr
+    7  ls /usr/share
+    8  ls /usr/share/doc
+    9  ls --help
+   10  apropos crontab
+   11  ls --help
+   12  ls --help | less
+   13  apropos crontab
+   14  man man
+   15  man crontab
+   16  info ls
+   17  date
+   18  cal
+   19  df
+   20  free
+   21  pwd
+   22  ls
+   23  ls /usr/bin
+   24  ls /usr
+   25  ls ~ /usr
+   26  less /etc/passwd
+   27  ls /bin /usr/bin | sort | uniq | grep zip 
+   28  echo *
+   29  > 123
+   30  ls
+   31  echo *
+   32  echo this is a test
+   33  ls -A
+   34  echo {01..15}
+   35  echo {01..15} > digit
+   36  ls
+   37  cat digit
+   38  echo { Z..A }
+   39  echo {Z..A}
+   40  echo {z..a}
+   41  echo {a..z}
+   42  echo $USER
+   43  printenv | less
+   44  echo ($ls) 
+   45  echo $(ls) 
+   46  file $(ls -d /usr/bin/* | grep zip)
+   47  man ls
+   48  echo cal
+   49  echo $cal
+   50  echo "$(cal)"
+   51  echo "$(cal)" > clnd
+   52  cat clnd
+   53  sleep 10; echo "Time's up" $'\a'
+   54  sleep 4; echo "Time's up" $'\a'
+   55  cat clnd 
+   56  dir
+   57  cat digit 
+   58  history | less
+   59  history | grep cal
+   60  echo "$(cal)"
+   61  file $(ls -d /usr/bin/* | grep zip)
+   62  file /etc/shadow
+   63  cat /etc/shadow
+   64  id
+   65  less /etc/passwd
+   66  ls
+   67  >foo.txt
+   68  ls -l 
+   69  chmod 600 foo.txt
+   70  ls -l 
+   71  umask
+   72  rm foo.txt
+   73  ls -l 
+   74  >foo.txt
+   75  ls -l 
+   76  man umask
+   77  info umask
+   78  umask --help
+   79  umask
+   80  umask 077
+   81  ls -l 
+   82  rm foo.txt
+   83  ls -l 
+   84  >foo.txt
+   85  ls -l 
+   86  umask 022
+   87  man adduser
+   88  adduser tst
+   89  sudo adduser tst
+   90  ls
+   91  su -l tst
+   92  echo $DISPLAY
+   93  export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+   94  echo $DISPLAY
+   95  xlogo
+   96  ps
+   97  xlogo &
+   98  ps
+   99  jobs
+  100  fg %1
+  101  ps
+  102  xlogo&
+  103  kill 80
+  104  ps
+  105  printenv USER
+  106  echo $HOME
+  107  echo $DISPLAY $EDITOR
+  108  echo $DISPLAY $EDITOR $SHELL
+  109  echo $DISPLAY $EDITOR $SHELL $LANG $OLDPWD $PAGER
+  110  ls -a
+  111  less .profile
+  112  vim
+  113  cp .bashrc .bashrc.bak
+  114  ls -a
+  115  nano .bashrc
+  116  ll
+  117  l.
+  118  nano .bashrc
+  119  l.
+  120  la
+  121  l.
+  122  source .bashrc
+  123  l.
+  124  vi
+  125  ls
+  126  vi foo.txt
+  127  less foo.txt
+  128  vi foo.txt
+  129  ls
+  130  history
+  131  ip a
+  132  netstat -ie
+  133  sudo apt install net-tools
+  134  netstat -ie
+  135  netstat -r
+  136  ftp
+  137  wget  http://linuxcommand.org/index.php
+  138  ls
+  139  vim index.php
+  140  ssh remote-sys
+  141  locate /bin/zip
+  142  sudo apt install mlocate
+  143  history
+  144  locate /bin/zip
+  145  slocate /bin/zip
+  146  dlocate /bin/zip
+  147  su updatedb
+  148  sudo updatedb
+  149  ps
+  150  find ~
+  151  find ~ | wc -l
+  152  man wc
+  153  find ~ -type d | wc -l
+  154  find ~ -type f | wc -l
+  155  find ~ -type f -name '*.bak' -print
+  156  find ~ -type f -name '*.php' -print
+  157  find ~ -type f -name '*.php' -delete
+  158  find ~ -type f -name '*.php' -print
+  159  find ~ | wc -l
+  160  > foo1
+  161  > foo2
+  162  ~ -type f -name 'foo*' -exec ls -l '{}' ';'
+  163  find ~ -type f -name 'foo*' -exec ls -l '{}' ';'
+  164  find ~ -type f -name 'foo*' -exec ls -l '{}' '+'
+  165  find ~ -type f -name 'foo*' -print | xargs ls -l
+  166  ls /bin > dirlist-bin.txt
+  167  less dirlist-bin.txt
+  168  ls usr/bin > dirlist-usr-bin.txt
+  169  ls /usr/bin > dirlist-usr-bin.txt
+  170  ls /sbin > dirlist-sbin.txt
+  171  ls /usr/sbin > dirlist-usr-sbin.txt
+  172  ls dirlist*.txt
+  173  grep bzip dirlist*.txt
+  174  grep -l bzip dirlist*.txt
+  175  grep -L bzip dirlist*.txt
+  176  grep -h '.zip' dirlist*.txt
+  177  grep -h '^zip' dirlist*.txt
+  178  grep -h 'zip$' dirlist*.txt
+  179  grep -h '^zip$' dirlist*.txt
+  180  ls /usr/share/dict
+  181  ls /usr/share/dict/words
+  182  grep -h '[bg]zip' dirlist*.txt
+  183  grep -h '[A_Z]' dirlist*.txt
+  184  grep -h '^[A_Z]' dirlist*.txt
+  185  grep -h '^[A-Z]' dirlist*.txt
+  186  grep -h '[A-Z]' dirlist*.txt
+  187  echo $LANG
+  188  ls /usr/sbin/[[:upper:]]*
+  189  locale
+  190  sed --help
+  191  pwd; whoami
+  192  getconf ARG_MAX
+  193  mkdir scripts
+  194  ls
+  195  touch /scripts/bs_01
+  196  cd scripts
+  197  touch bs_01
+  198  ls
+  199  vim bs_01
+  200  ls
+  201  cat bs_01
+  202  ll bs_01
+  203  bs_01
+  204  ./bs_01
+  205  chmod +x ./bs_01
+  206  ./bs_01
+  207  vim bs_01
+  208  ./bs_01
+  209  vim bs_01
+  210  ./bs_01
+  211  vim bs_01
+  212  ./bs_01
+  213  vim bs_01
+  214  less bs_01
+  215  vim bs_01
+  216  ./bs_01
+  217  vim bs_01
+  218  ./bs_01
+  219  vim bs_01
+  220  ./bs_01
+  221  vim bs_01
+  222  ./bs_01
+  223  mlocate
+  224  mlocate zip | grep bin
+  225  clear
+  226  ./bs_01
+  227  cd scripts
+  228  ./bs_01
+  229  echo "AAA" | grep AAA
+  230  echo "BBB" | grep AAA
+  231  echo "AAA" | grep -E 'AAA|BBB'
+  232  echo "BBB" | grep -E 'AAA|BBB'
+  233  echo "CCC" | grep -E 'AAA|BBB'
+  234  man grep
+  235  grep -Eh '^bz|gz|zip' dirlist*.txt
+  236  cd ..
+  237  grep -Eh '^bz|gz|zip' dirlist*.txt
+  238  echo "This works." | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'
+  239  echo "this does not" | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'
+  240  echo "This Works." | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'
+  241  echo "This that" | grep -E '^([[:alpha:]]+ ?)+$'
+  242  echo "a b c" | grep -E '^([[:alpha:]]+ ?)+$'
+  243  echo "a b 9" | grep -E '^([[:alpha:]]+ ?)+$'
+  244  echo "abc d" | grep -E '^([[:alpha:]]+ ?)+$'
+  245  echo "abc  d" | grep -E '^([[:alpha:]]+ ?)+$'
+  246  echo "(555) 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-
+  247  exit
+  248  echo "(555) 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
+  249  echo "555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
+  250  echo "5555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
+  251  for i in {1..10}; do echo "(${RANDOM:0:3}) ${RANDOM:0:3}-${RANDOM:0:4}" >> phonelist.txt; done
+  252  ls
+  253  cat phonelist.txt
+  254  vi phonelist.txt
+  255  cat phonelist.txt
+  256  grep -Ev '^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$' phonelist.txt
+  257  less phonelist.txt
+  258  cd /usr/share/man/man1
+  259  zgrep -El 'regex|regular expression' *.gz
+  260  ~
+  261  -
+  262  cd -
+  263  cat > foo.txt
+  264  cat foo.txt
+  265  cat -A foo.txt
+  266  sort > foo1.txt 
+  267  cat foo1.txt
+  268  du -s /usr/share/* | head
+  269  du -s /usr/share/*| sort -nr | head
+  270  sudo apt update
+  271  sudo apt install snapd
+  272  sudo snap install gnome-dictionary
+  273  ls -l /usr/bin | head
+  274  ls -l /usr/bin | sort -nr -k 5 | head
+  275  vim distros.txt
+  276  cat distos.txt
+  277  cat distros.txt
+  278  sort distros.txt
+  279  sort --key=1,1 --key=2n distros.txt
+  280  cut -f 3 distros.txt
+  281  cat -A distros.txt
+  282  cut  3 distros.txt
+  283  cut -f 3 distros.txt
+  284  cut -f d=" " 3 distros.txt
+  285  cut -f -d " " 3 distros.txt
+  286  cut  -d ' ' -f 3 distros.txt
+  287  cut  -d ' ' -f 3 distros.txt | cut -c 7-10
+  288  cut -d ':' -f 1 /etc/passwd | head
+  289  cut -c 23-
+  290  cut -c 23- distros.txt
+  291  cat distros.txt
+  292  cat -A distros.txt
+  293  cut -c 17- distros.txt
+  294  expand distros.txt | cut -c 23-
+  295  expand distros.txt | cat
+  296  unexpand distros.txt | cat
+  297  unexpand distros.txt | cat -A
+  298  man unexpand
+  299  unexpand -a distros.txt | cat -A
+  300  expand distros.txt | cat -A
+  301  vim distros.txt
+  302  cat -A distros.txt
+  303  expand distros.txt | cat -A
+  304  cat -A distros.txt
+  305  unexpand -a distros.txt | cat -A
+  306  vim distros.txt
+  307  unexpand -a distros.txt | cat -A
+  308  sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt | cat 
+  309  vim distros1.txt
+  310  sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros1.txt | cat 
+  311  sort distros1.txt
+  312  sort distros.txt
+  313  unexpand  distros1.txt | cat -A
+  314  sort distros1.txt
+  315  unexpand  distros1.txt | cat -A
+  316  expand  distros.txt | cat -A
+  317  sort --key=1,1 --key=2n distros.txt
+  318  sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt
+  319  vim distros1.txt
+  320  cat -A distros1.txt
+  321  vim distros1.txt
+  322  cut -f 3 distros1.txt
+  323  cut -f 3 distros1.txt | cut -c 7-10
+  324  cut -d ':' -f 1 /etc/passwd | head
+  325  expand  distros1.txt | cat -c 23-
+  326  expand  distros1.txt | cut -c 23-
+  327  cat -A distros1.txt
+  328  sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros1.txt > distros1-by-date.txt
+  329  cat -A distros1-by-date.txt
+  330  cut -f 1,2 distros1-by-date.txt > distros1-versions.txt
+  331  cat -A distros1-versions.txt
+  332  cat  distros1-versions.txt
+  333  cut -f 3 distros1-by-date.txt > distros1-dates.txt
+  334  cat  distros1-dates.txt
+  335  paste distros1-dates.txt distros1-versions.txt
+  336  cut -f 1,1 distros1-by-date.txt > distros1-names.txt
+  337  cut -f 2,2 distros1-by-date.txt > distros1-vernums.txt
+  338  cat distros1-names.txt
+  339  cat distros1-vernums.txt
+  340  paste distros1-dates.txt distros1-names.txt > distros1-key-names.txt
+  341  cat distros1-key-names.txt
+  342  paste distros1-dates.txt distros1-vernums.txt > distros1=keyvernums1.txt
+  343  cat distros1=keyvernums1.txt
+  344  join distros1-key-names.txt distros1=keyvernums1.txt | head
+  345  cat > f1.txt
+  346  cat > f2.txt
+  347  comm f1.txt f2.txt
+  348  comm -12 f1.txt f2.txt
+  349  comm -1 f1.txt f2.txt
+  350  comm -3 f1.txt f2.txt
+  351  diff -Naur f1.txt f2.txt > patchfile.txt
+  352  cat  patchfile.txt
+  353  patch < patchfile.txt
+  354  cat f1.txt
+  355  echo "lowercase letters" | tr a-z A-Z
+  356  echo "aaabbbccc" | tr -s ab
+  357  echo "aaabbbccc" | tr -s abc
+  358  tr --help
+  359  vim 
+  360  ls
+  361  sed -f distros.sed distros.txt
+  362  less distros.txt
+  363  cat distros.txt
+  364  vim 
+  365  sort -k 1,1 -k 2n distros.txt | sed -f distros-nl.sed | nl
+  366  sort -k 1,1 -k 2n distros1.txt | sed -f distros-nl.sed | nl
+  367  ls /usr/bin/*[[:alpha:]]2[[:alpha:]]*
+  368  which gcc
+  369  sudo apt install gcc
+  370  which make
+  371  sudo apt install make
+  372  mkdir src
+  373  cd src
+  374  ftp ftp.gnu.org
+  375  cd ..
+  376  which vsftpd.conf
+  377  which gcc
+  378  wget https://ftp.gnu.org/gnu/diction/diction-1.11.tar.gz
+  379  find diction*
+  380  find diction* -print
+  381  readlink -f diction-1.11.tar.gz
+  382  mv diction-1.11.tar.gz /src
+  383  sudo mv diction-1.11.tar.gz /src
+  384  cd src
+  385  ls
+  386  cd /src
+  387  mv ../diction-1.11.tar.gz ./src
+  388  ls ..
+  389  readlink -f diction-1.11.tar.gz
+  390  ls -l
+  391  pwd
+  392  realpath diction-1.11.tar.gz
+  393  ls /home/san
+  394  ll /home/san/src
+  395  ls .
+  396  ll
+  397  tar xzf diction-1.11.tar.gz
+  398  realpath diction-1.11.tar.gz
+  399  tar xzf /home/san/src/diction-1.11.tar.gz
+  400  wget https://ftp.gnu.org/gnu/diction/diction-1.11.tar.gz
+  401  ls
+  402  realpath diction-1.11.tar.gz
+  403  tar xzf diction-1.11.tar.gz
+  404  ls
+  405  LOCAL_VARIABLE="diction-1.11.tar.gz" && echo $(cd $(dirname "$LOCAL_VARIABLE") && pwd -P)/$(basename "$LOCAL_VARIABLE"
+  406  find $PWD -type f | grep "diction-1.11.tar.gz"
+  407  tar tzvf diction-1.11.tar.gz | head
+  408  ls -l /diction-1.11
+  409  ls  /diction-1.11
+  410  cd diction-1.11
+  411  ls
+  412  ls *.c
+  413  less diction.c
+  414  ls /usr/include
+  415  ls .
+  416  ll
+  417  ./configure
+  418  ls M*
+  419  less Makefile
+  420  make
+  421  ls
+  422  make
+  423  rm getopt.o
+  424  make
+  425  ls
+  426  ls -l diction getopt.c
+  427  make
+  428  touch getopt.c
+  429  make
+  430  ls /usr/local/bin
+  431  sudo make install
+  432  which diction
+  433  man diction
+  434  echo $PATH
+  435  echo $PATH | grep /home
+  436  echo $PATH | grep home
+  437  echo $PATH | grep san
+  438  echo $PATH | grep usr
+  439  cd ~
+  440  echo $PATH | grep san
+  441  echo $PATH | grep home
+  442  mkdir bin
+  443  vim
+  444  ls -l hello_world
+  445  chmod 755 hello_world
+  446  ls -l hello_world
+  447  hello_world
+  448  ./hello_world
+  449  mv hello_world /bin
+  450  sudo  mv hello_world /bin
+  451  1234
+  452  ls /bin
+  453  ls ./bin
+  454  ls bin
+  455  cd bin
+  456  ls
+  457  sudo  mv hello_world  bin
+  458  cd ..
+  459  ls hello*
+  460  ls bin
+  461  cd bin
+  462  ll
+  463  cd ..
+  464  hello_world
+  465  $PATH
+  466  ll bin*
+  467  ll bin/
+  468  cd bin
+  469  ll
+  470  vim hello_world
+  471  ls
+  472  cd ..
+  473  ls he*
+  474  vim hello_world
+  475  realpath hello_world
+  476  pwd
+  477  ls he*
+  478  hello_world
+  479  ls .
+  480  ls src
+  481  ls bin
+  482  ll bin
+  483  firefox
+  484  sudo apt install firefox
+  485  firefox
+  486  hello_world
+  487  vim hello_world
+  488  realpath hello_world
+  489  ls
+  490  $DISPLAY
+  491  export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+  492  $DISPLAY
+  493  firefox
+  494  ll
+  495  cd bin
+  496  ll
+  497  hello_world
+  498  realpath hello_world
+  499  vim hello_world
+  500  vim ~/hello_world
+  501  ll 
+  502  cd ./
+  503  ll
+  504  cd ../
+  505  ll h*
+  506  man ls
+  507  ls -l | grep `^d'
+  508  ls -l | grep `^d`
+  509  ls -d */
+  510  cd src/
+  511  ll
+  512  cd -
+  513  ls -d */
+  514  cd scripts/
+  515  ll
+  516  bs_01
+  517  ./bs_01
+  518  man ls
+  519  ls -l 
+  520  vim bs_01
+  521  cd -
+  522  ls -l | grep '^d'
+  523  $PATH
+  524  ll scripts
+  525  cp scripts/bs_01 bin
+  526  ll bin
+  527  bs_01
+  528  vim /bin/bs_01
+  529  vim bin/bs_01
+  530  bs_01
+  531  vim bin/bs_01
+  532  bs_01
+  533  ls -l | egrep -v '^d'
+  534  alias lf="ls -l | egrep -v '^d'"
+  535  vim .bash_profile
+  536  cd
+  537  ls - a
+  538  ls -a
+  539  ls -a bash*
+  540  ls -a .bash*
+  541  vim .bashrc
+  542  ldir
+  543  alias ldir='ls -d */'
+  544  ldir
+  545  lf
+  546  vim
+  547  firefox file://home/san/foo.html
+  548  vim ~/bin/sys_info_page
+  549  chmod 755 ~/bin/sys_info_page
+  550  sys_info_page
+  551  vim ~/bin/sys_info_page
+  552  sys_info_page
+  553  vim ~/bin/sys_info_page
+  554  ll ~/bin
+  555  chmod 755 ~/bin/page_info
+  556  ll ~/bin
+  557  page_info
+  558  vim ~/bin/page_info
+  559  page_info
+  560  vim ~/bin/page_info
+  561  filename="myfile"
+  562  touch $filename
+  563  mv $filename $filename1
+  564  mv $filename $(filename)1
+  565  mv $filename ${filename}1
+  566  vim ~/bin/page_info
+  567  page_info
+  568  vim ~/bin/page_info
+  569  ls p*
+  570  mv page_info1 ~/bin/page_info1
+  571  ll ~/bin
+  572  chmod 755 ~/bin/page_info1
+  573  page_info1
+  574  vim ~/bin/page_info1
+  575  page_info1
+  576  df -h
+  577  vim ~/bin/page_info1
+  578  page_info1
+  579  vim ~/bin/page_info1
+  580  page_info1
+  581  vim ~/bin/page_info1
+  582  page_info1
+  583  vim ~/bin/page_info1
+  584  page_info1
+  585  vim .bashrc
+  586  ds
+  587  source .bashrc
+  588  ds
+  589  ls -d /usr/bin
+  590  echo $?
+  591  ls -d /bin/usr
+  592  echo $?
+  593  true
+  594  echo $?
+  595  false
+  596  echo $?
+  597  if true; then echo "It's true."; fi
+  598  if false; then echo "It's true."; fi
+  599  if false; true; then echo "It's true."; fi
+  600  if true; false; then echo "It's true."; fi
+  601  vim test_file
+  602  mv test_file /bin
+  603  ll /bin
+  604  ll
+  605  ll bin/
+  606  mv test_file bin/
+  607  chmod 755 ~/bin/test_file
+  608  test_file
+  609  vim bin/test_file
+  610  test_file
+  611  vim bin/test_file
+  612  ls bin
+  613  ls ~
+  614  ls ~/bin
+  615  vim bin/test_file
+  616  test_file
+  617  -d temp
+  618  [ -d temp ] || mkdir temp
+  619  ls t*
+  620  vim read-integer
+  621  chmod 755 read-integer
+  622  ./read-integer
+  623  mv read-integer bin/
+  624  read-integer
+  625  less /etc/passwd
+  626  vim read-ifs
+  627  chmod 755 read-ifs
+  628  read-ifs
+  629  mv read-ifs bin/
+  630  read-ifs
+  631  vim bin/read-ifs
+  632  read-ifs
+  633  vim bin/read-ifs
+  634  read-ifs
+  635  vim bin/read-validate
+  636  chmod 755 bin/read-validate
+  637  read-validate
+  638  read-validate 
+  639  vim bin/read-validate
+  640  read-validate 
+  641  vim bin/read-validate
+  642  read-validate 
+  643  vim bin/read-validate
+  644  read-validate 
+  645  vim bin/read-validate
+  646  less  /etc/vim/vimrc.local
+  647  less  /etc/vim/vimrc
+  648  ls .vim*
+  649  touch ~/.vimrc
+  650  ls .vim*
+  651  vim .vimrc
+  652  vim bin/read-validate
+  653  vim .vimrc
+  654  vim bin/read-validate
+  655  read-validate 
+  656  vim .vimrc
+  657  vim bin/read-validate
+  658  read-validate 
+  659  vim bin/read-validate
+  660  vim .vimrc
+  661  vim bin/read-validate
+  662  vim .vimrc
+  663  vim bin/read-validate
+  664  vim .vimrc
+  665  vim bin/read-validate
+  666  read-validate 
+  667  vim bin/read-validate
+  668  read-validate 
+  669  vim bin/read-validate
+  670  read-validate 
+  671  vim bin/case_shabl
+  672  chmod 755 bin/case_shabl
+  673  ll bin/
+  674  case_shabl
+  675  man read
+  676  read --help
+  677  vim bin/case4-1
+  678  chmod 755 bin/case4-1
+  679  case4-1
+  680  vim bin/case4-2
+  681  chmod 755 bin/case4-2
+  682  case4-2
+  683  vim bin/posit-param
+  684  chmod 755 bin/posit-param
+  685  posit-param
+  686  posit-param a 22 ds
+  687  posit-param *
+  688  vim bin/posit-param2
+  689  chmod 755 bin/posit-param2
+  690  posit-param2
+  691  posit-param2 *
+  692  vim bin/file_info
+  693  chmod 755 bin/file_info
+  694  file_info
+  695  file_info clnd
+  696  ls sys*
+  697  ls  bin/sys*
+  698  vim sys_info_page1
+  699  chmod 755 bin/ sys_info_page1
+  700  chmod 755 bin/sys_info_page1
+  701  readlink  sys_info_page1
+  702  ls sys*
+  703  ./ sys_info_page1
+  704  ./sys_info_page1
+  705  vim sys_info_page1
+  706  ls sys*
+  707  mv  sys_info_page1 bin/
+  708  ls sys*
+  709  ls  bin/sys*
+  710  vim  bin/sys_info_page1
+  711  sys_info_page1
+  712  vim  bin/sys_info_page1
+  713  sys_info_page1 
+  714  [me@linuxbox ~]$ a=0
+  715  ((a<1?a+=1:a-=1))
+  716  ((a<1?(a+=1):(a-=1)))
+  717  echo a
+  718  echo $a
+  719  a=0
+  720  ((a<1?(a+=1):(a-=1)))
+  721  echo $a
+  722  ((a<1?(a+=1):(a-=1)))
+  723  echo $a
+  724  ((a<1?(a+=1):(a-=1))) echo $a
+  725  ((a<1?(a+=1):(a-=1))) | echo $a
+  726  ((a<1?(a+=1):(a-=1))) 
+  727  echo $a
+  728  ((a<1?(a+=1):(a-=1))) | echo $a
+  729  echo $a
+  730  ((a<1?(a+=1):(a-=1))) | echo $a
+  731  echo $a
+  732  ((a<1?(a+=1):(a-=1))) 
+  733  echo $a
+  734  vim  bin/arith-loop
+  735  chmod 755 bin/arith-loop
+  736  arith-loop
+  737  vim  bin/arith-loop
+  738  vim bin/foo.bc
+  739  mv bin/foo.bc .
+  740  ls foo*
+  741  bc foo.bc
+  742  bc foo.bc -q
+  743  bc <<< "2+7"
+  744  [ -d temp ] || mkdir temp
+  745  ll te*
+  746  man id
+  747  id
+  748  id -u
+  749  man du
+  750  du -sh /home/*
+  751  vim 
+  752  chmod 755 bin/while-menu
+  753  while-menu
+  754  vim
+  755  chmod 755 bin/until-count
+  756  until-count
+  757  ls dist*
+  758  vim bin/while-read
+  759  chmod 755 bin/while-read
+  760  while-read
+  761  less distros.txt
+  762  ls bin/case*
+  763  vim bin/case-menu
+  764  chmod 755 bin/case-menu
+  765  case-menu
+  766  ls bin/case*
+  767  less  bin/case_shabl
+  768  case_shabl 
+  769  case_shabl dfd
+  770  case_shabl 
+  771  case_shabl txt
+  772  case_shabl 
+  773  man read
+  774  man read(1)
+  775  man read 1
+  776  read help
+  777  ls bin/pos*
+  778  posit-param
+  779  posit-param w 2
+  780  posit-param2 2 
+  781  posit-param2 *
+  782  ls bin/file*
+  783  while read; do echo "$REPLY"; done
+  784  while read -ep "Type something: " -i "My text is " text; do    echo "$text"; done
+  785  man echo
+  786  echo -e "\nFile Type:"
+  787  echo -e "\nFile Type:"
+  788  chmod 755 bin/prgname
+  789  prgname
+  790  less bin/prgname
+  791  vim bin/prgname
+  792  vim bin/prgname
+  793  prgname test
+  794  file_info tessst
+  795  file_info bin/prgname
+  796  man stat
+  797  file_info bin/prgname
+  798  ls bin/pos*
+  799  bin/posit-param2
+  800  posit-param2
+  801  posit-param2 a b c
+  802  posit-param2 *
+  803  vim bin/file_info_fun
+  804  chmod 755 bin/file_info_fun
+  805  vim bin/file_info_fun
+  806  file_info_fun
+  807  ls
+  808  vim bin/file_info_fun
+  809  file_info_fun
+  810  vim bin/file_info_fun
+  811  file_info_fun
+  812  vim bin/file_info_fun
+  813  file_info_fun
+  814  ls bin/pos*
+  815  vim bin/posit-params3
+  816  posit-params3
+  817  chmod 755 bin/posit-params3
+  818  posit-params3
+  819  vim test1
+  820  chmod 755 test1
+  821  test1
+  822  ./test1
+  823  vim test1
+  824  ./test1
+  825  vim test1
+  826  ./test1 test1
+  827  ls
+  828  ./test1 f1.txt
+  829  vim test1
+  830  ./test1 f1.txt
+  831  vim test1
+  832  ./test1 f1.txt
+  833  vim test1
+  834  ./test1 f1.txt
+  835  ./test1 -f f1.txt
+  836  ls bin/sys*
+  837  vim bin/sys_info_page1
+  838  sys_info_page1 -f sys_info.html
+  839  ls sys*
+  840  less sys_info.html
+  841  for i in distros*.txt; do echo "$i"; done
+  842  ls bin/long*
+  843  touch test.txt
+  855  less test.txt
+  856  chmod 755 bin/longest-word
+  857  longest-word test.txt
+  858  touch test1.txt < cat Независимо от того, работают ваши системы в центре обработки данных, в облаке
+  866  ls test1*
+  867  ls test*
+  868  touch test1.txt
+  869  ls test*
+  870  vin test1.txt
+  871  vim test1.txt
+  872  less test1.txt
+  873  longest-word test1.txt
+  874  longest-word test.txt test1.txt
+  875  echo "получили" | wc -c 
+  876  echo получили | wc -c 
+  877  echo uphold | wc -c 
+  878  echo гнусный | wc -c 
+  879  echo гнусный | wc -m 
+  880  echo получили | wc -m 
+  881  man wc
+  882  foo=
+  883  echo $foo
+  884  echo ${foo:-"substitute value if unset"}
+  885  echo ${!BASH*}
+  886  ls din/long*
+  887  ls bin/long*
+  888  longest-word3 test.txt
+  889  longest-word3 test.txt test1.txt
+  890  ls bin/ul*
+  891  ul-declare frt
+  892  bc <<< "2+2"
+  893  vim foo.bc
+  894  bc < foo.bc
+  895  vim foo.bc
+  896  bc < foo.bc
+  897  { ls -l; echo "Listing of foo.txt"; cat foo.txt; } > output.txt
+  898  less output.txt
+  899  mkfifo pipe1
+  900  ls -l > pipe1
+  901  history > hist
